@@ -1,0 +1,636 @@
+font-family: "Lucida Grande", Arial, sans-serif;
+color: #666666;/* CSS Document */
+@charset "utf-8";
+/* basic default values for all modules */
+/*
+ * @setup_framework_path
+ * Specifies the path to the framework folder
+ * which can be used by modules to include images
+ * and other path related elements.
+ */
+/*
+ * @setup_vertical_rhythm
+ * specifies the height of each row in the grid
+ * "as pixel value". This value is used to calculate
+ * the relation between text size and row height to
+ * achieve a vertical rhythm throughout the document
+ */
+/*  @setup_font_size 
+ *  specifies the basic text size "in pixels", note that
+ *  all text sizes are actually applied as % or em. This
+ *  value is just a relation to the row height.
+ */
+/* install framework modules */
+/* CSS Document */
+/* css reset taken from YUI 3 Library */
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.1.1
+build: 47
+*/
+/* ERIC MEYERS - RESET RELOADED */
+/* 
+  style.css contains a reset, font normalization and some base styles.
+  
+  credit is left where credit is due.
+  additionally, much inspiration was taken from these projects:
+    yui.yahooapis.com/2.8.1/build/base/base.css
+    camendesign.com/design/
+    praegnanz.de/weblog/htmlcssjs-kickstart
+*/
+/* 
+  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+/* END RESET CSS *//* setup default values for all grid components */
+/* install components of the grid module */
+/**
+ *  FLAW{LESS} Css Framework
+ *
+ *  grid.less
+ *  The grid is the core component of the FLAW{LESS} Css Framework
+ *  and provides extremely modular mixins that add specific functionality
+ *  as needed to your project. This way the core remains as slim as you
+ *  need it to, leaving all overhead aside.
+ *
+ *  @author: Dominik Guzei
+ *  @website: wizzart.at
+ *
+ *  MIT-License: http://www.opensource.org/licenses/mit-license.php
+ */
+/**
+ *  .grid - MIXIN
+ *  The core function of the grid module, that builds up
+ *  the basic structure and provides you with up to 24
+ *  columns with custom gap, min-width and max-width
+ *
+ *  it's also the setup function for all other grid
+ *  modules. So you can define most presets in one
+ *  mixin call.
+ *
+ *  @width   - defines the width of the grid in (any css unit)
+ *  @columns - specifies the number of columns in the grid
+ *             up to 24 columns are possible. (plane number)
+ *  @gap     - The gap between elements in the grid (any css unit)
+ *  @min     - minimal width of the grid (any css unit)
+ *  @max     - maximal width of the grid (any css unit)
+ *  @align   - align the grid on left / center / right side of parent
+ */
+/* ie fixes for grid component */
+.ie .in {
+  word-wrap: break-word;
+  overflow-x: hidden;
+  height: 1%;
+}
+/**
+ *  .spanWidth - MIXIN
+ *  Utility mixin used by the framework to calculate the
+ *  width of @number cells in the grid and add it to the calling
+ *  element. It distinguishes between relative (%) and absolute
+ *  units (px, em) for the calculation. This way you can use
+ *  any units for your grid.
+ */
+/**
+ *  .appendWidth - MIXIN
+ *  See: .spanWidth
+ *  adds the with of @number cells to the right margin
+ *  and thus moves the element to the left side
+ */
+/**
+ *  .prependWidth - MIXIN
+ *  See: .prependWidth
+ *  adds the with of @number cells to the right margin
+ *  and thus moves the element to the left side
+ */
+/**
+ *  .prependWidth - MIXIN
+ *  See: .prependWidth
+ *  adds the with of @number cells to the right margin
+ *  and thus moves the element to the left side
+ */
+/**
+ *  .prependWidth - MIXIN
+ *  See: .prependWidth
+ *  adds the with of @number cells to the right margin
+ *  and thus moves the element to the left side
+ */
+/*External Link - adds a little external link icon to all of your external links*/
+/*Email Links - adds small email icon to all mailto links*/
+/*AIM Links - adds small IM icon to all aim:goim?screenname=username links*/
+/*PDF Links - adds a small PDF icon to all PDF links*/
+/*DOC Links - adds a small word doc icon to all word document links*/
+/*RSS Links - adds a small Feed icon to all RSS feed links*/
+/*RDF Links - adds a small Feed icon to all RDF feed links*/
+/* insert all external link components with one image file */
+/* install navigation components */
+/* INSTALL ADDONS
+ * Here you can add imports to install addons that
+ * reside in subfolders of the addons folder. This
+ * enables everyone to write addons to the framework
+ * and easy installation for the end user.
+ */
+/**
+ * .type() MIXIN
+ *
+ * This mixin can be used on any wrapper to switch
+ * to a specific color sheme or font family on all
+ * sub elements.
+ */
+button:hover {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+button.thoughtbot {
+  background: #c63929;
+  background: -moz-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #ee432e), color-stop(0.5, #c63929), color-stop(0.5, #b51700), color-stop(1, #891100));
+  border: 1px solid #951100;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+  color: #fff;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8);
+  width: 150px;
+}
+button.thoughtbot:hover {
+  background: #cb0500;
+  background: -moz-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #f37873), color-stop(0.5, #db504d), color-stop(0.5, #cb0500), color-stop(1, #a20601));
+  cursor: pointer;
+}
+button.thoughtbot:active {
+  background: #b30300;
+  background: -moz-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #d43c28), color-stop(0.5, #ad3224), color-stop(0.5, #9c1500), color-stop(1, #700d00));
+  -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);
+}
+button[disabled], button[disabled]:hover, button[disabled]:active {
+  background: #999;
+  border: 0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #aaa;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+/* mix the params into the element as variables
+   * so that other modules can take them as defaults */
+body {
+  text-align: center;
+}
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #4083c4;
+}
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #66829e;
+}
+h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input, select {
+  vertical-align: middle;
+}
+body {
+  padding-top: 40px;
+  background: url(/img/bg.jpg) #89b556 top center no-repeat;
+}
+#page {
+  width: 80%;
+  min-width: 740px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+  /* CLEARFIX MIXIN */
+
+  zoom: 1;
+  background: #FFF;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  behavior: url(_www/css/flawless/core/production/framework/css3/PIE.htc);
+  -moz-box-shadow: 2px 2px 20px #000000;
+  -webkit-box-shadow: 2px 2px 20px #000000;
+  box-shadow: 2px 2px 20px #000000;
+  behavior: url(_www/css/flawless/core/production/framework/css3/PIE.htc);
+}
+#page .wrap, #page .in {
+  zoom: 1;
+}
+#page .wrap:before,
+#page .in:before,
+#page .wrap:after,
+#page .in:after {
+  content: "";
+  display: table;
+}
+#page .wrap:after, #page .in:after {
+  clear: both;
+}
+#page:before, #page:after {
+  content: "";
+  display: table;
+}
+#page:after {
+  clear: both;
+}
+@media only screen and (min-width: 0px) {
+  #page {
+    width: 80%;
+    min-width: 0px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: left;
+    /* CLEARFIX MIXIN */
+  
+    zoom: 1;
+  }
+  #page .wrap, #page .in {
+    zoom: 1;
+  }
+  #page .wrap:before,
+  #page .in:before,
+  #page .wrap:after,
+  #page .in:after {
+    content: "";
+    display: table;
+  }
+  #page .wrap:after, #page .in:after {
+    clear: both;
+  }
+  #page:before, #page:after {
+    content: "";
+    display: table;
+  }
+  #page:after {
+    clear: both;
+  }
+}
+#content {
+  zoom: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-top: 30px;
+}
+#content:before, #content:after {
+  content: "";
+  display: table;
+}
+#content:after {
+  clear: both;
+}
+article {
+  width: 50%;
+  /* the article is 4 columns wide */
+
+  float: left;
+  /* it floats left */
+
+  /* has gaps on both sides */
+
+  /* is shifted 2 columns to the right to swap
+   * position with the first sidebar although its
+   * the first element in markup ;-) */
+
+  left: 25%;
+  position: relative;
+  /* make this column an equal height column */
+
+  padding-bottom: 32767px;
+  margin-bottom: -32767px;
+  background-color: #ffffff;
+  /* add background color */
+
+}
+article > .in {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+article textarea {
+  width: 100%;
+  height: 40px;
+  font-size: 1.2em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  behavior: url(_www/css/flawless/core/production/framework/css3/PIE.htc);
+  border: solid 1px #999;
+  -webkit-box-shadow: inset 0 4px 4px #999;
+  -moz-box-shadow: inset 0 4px 4px #999;
+  box-shadow: inset 0 4px 4px #999;
+}
+article input {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  behavior: url(_www/css/flawless/core/production/framework/css3/PIE.htc);
+  border: solid 1px #999;
+  font-size: 1.2em;
+  padding: 3px;
+}
+article button {
+  height: 30px;
+}
+article #chatview {
+  height: 300px;
+  overflow: auto;
+  border: solid 1px #999;
+  margin: 20px -5px 10px 0;
+  clear: both;
+  padding: 5px;
+}
+article #chatview .msg.add {
+  background-color: #89B556;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  behavior: url(_www/css/flawless/core/production/framework/css3/PIE.htc);
+  font-weight: bold;
+  color: #FFF;
+}
+article #chatview .msg.del {
+  background-color: #B30300;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  behavior: url(_www/css/flawless/core/production/framework/css3/PIE.htc);
+  font-weight: bold;
+  color: #FFF;
+}
+article #chatview .msg {
+  padding-top: 2px;
+  clear: both;
+}
+article #chatview .msg .from {
+  padding: 2px;
+  width: 80px;
+  overflow: hidden;
+  text-wrap: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  behavior: url(_www/css/flawless/core/production/framework/css3/PIE.htc);
+  background-color: #E5EECC;
+  float: left;
+  margin-right: 3px;
+}
+#join {
+  width: 70%;
+  float: left;
+}
+#joinBtn {
+  width: 25%;
+  float: right;
+  margin-right: -5px;
+}
+#sendBtn {
+  width: 120px;
+  float: right;
+  margin-right: -5px;
+}
+#help {
+  width: 25%;
+  /* the sidebar is 2 columns wide */
+
+  float: left;
+  /* it floats left (but would be beside the article on the right) */
+
+  right: 50%;
+  position: relative;
+  /* if we didn't shift it to the left 4 columns */
+
+  /* add gaps on both sides */
+
+  padding-bottom: 32767px;
+  margin-bottom: -32767px;
+  /* make this column an equal height column */
+
+  background-color: #ffffff;
+  /* add background color */
+
+}
+#help > .in {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+#help .light {
+  color: #ccc;
+}
+#help p {
+  padding-bottom: 10px;
+}
+#help h3 {
+  margin-bottom: 7px;
+  background: #89B556;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  behavior: url(_www/css/flawless/core/production/framework/css3/PIE.htc);
+  padding: 4px;
+  text-align: center;
+  color: #FFF;
+}
+#users {
+  width: 25%;
+  /* the sidebar is 2 columns wide */
+
+  margin-left: -5px;
+  float: right;
+  /* last column always floats right */
+
+  /* add gaps on both sides */
+
+  padding-bottom: 32767px;
+  margin-bottom: -32767px;
+  /* make this column an equal height column */
+
+}
+#users > .in {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+#users .profile {
+  float: left;
+  width: 60px;
+  overflow: hidden;
+  height: 120px;
+}
+footer {
+  width: 100%;
+  /* full 8 columns */
+
+  text-align: center;
+  border-top: 1px dashed #666;
+  margin-top: 10px;
+  height: 30px;
+}
+footer p {
+  padding-top: 5px;
+  color: #CCC;
+  font-weight: bold;
+}

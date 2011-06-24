@@ -1,0 +1,24 @@
+{
+  "name": "chatEx",
+  "description": "Test Project - Websocket/Node.js Chat Room",
+  "version": "0.0.1",
+  "homepage": "http://demetriusj.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:demetriusj/chatEx"
+  },
+  "author": "Demetrius Johnson <contact@demetriusj.com> (demetriusj.com)",
+  "main": "script.js",
+  "directories": {
+    "lib": "./"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "files": [
+    ""
+  ],
+  "scripts": {
+    "test": "expresso"
+  }
+}

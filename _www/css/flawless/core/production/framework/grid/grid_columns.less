@@ -1,0 +1,24 @@
+.grid_col_wrap() {
+	.util_clearfix();
+    width: 100%;
+	position:relative;
+}
+
+.grid_col_left(@left) {
+	width: @left;
+    float:left;
+}
+
+.grid_col_right(@right) {
+	width: @right;
+    float:right;
+}
+
+.grid_col_center(@left, @right) {
+	width: auto;
+    margin: 0 @right 0 @left;
+}
+
+.grid_no_col() {
+	margin: 0;	
+}
